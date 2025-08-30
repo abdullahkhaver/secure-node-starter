@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - MONGO_URI=mongodb://mongo:27017/secure_starter
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:6
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
