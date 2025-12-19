@@ -1,8 +1,8 @@
-# 🔐 Secure Node.js Backend Starter
+#  Secure Node.js Backend Starter
 
 Opinionated starter repo for a **secure Node.js + Express API**, aimed at beginners who want production-ready security practices built-in.
 
-⚠️ **Important:** No system can ever be *100% unhackable*. This repo implements **modern, pragmatic security best practices** to make attacks more difficult and reduce risk. See [`SECURITY_CHECKLIST.md`](./SECURITY_CHECKLIST.md) for additional steps you must apply before production.
+ **Important:** No system can ever be *100% unhackable*. This repo implements **modern, pragmatic security best practices** to make attacks more difficult and reduce risk. See [`SECURITY_CHECKLIST.md`](./SECURITY_CHECKLIST.md) for additional steps you must apply before production.
 
 ---
 
@@ -13,28 +13,28 @@ It follows the principles and patterns described in the handbook, ensuring that 
 
 If you’re using this starter, I strongly recommend reading through the handbook for deeper understanding and customization.The Handbook is attached to this repo.
 
-## 🚀 What this includes
+##  What this includes
 
-* ✅ **Express app** with:
+*  **Express app** with:
 
   * Helmet (secure headers)
   * Rate limiting
   * CORS
   * Basic CSRF protection
-* ✅ **Authentication** (register/login/refresh/logout):
+*  **Authentication** (register/login/refresh/logout):
 
   * Argon2 password hashing
   * Rotated refresh tokens
   * JWT access tokens stored in cookies
-* ✅ **Mongoose-based User model** (secure defaults, no password leaks)
-* ✅ **Auth middleware** (`auth.js`) to protect routes
-* ✅ **Dockerfile + docker-compose** (local dev with MongoDB)
-* ✅ **GitHub Actions** example (lint, test, CodeQL, Dependabot)
-* ✅ `.env.example` with **secure defaults**
+*  **Mongoose-based User model** (secure defaults, no password leaks)
+*  **Auth middleware** (`auth.js`) to protect routes
+*  **Dockerfile + docker-compose** (local dev with MongoDB)
+*  **GitHub Actions** example (lint, test, CodeQL, Dependabot)
+*  `.env.example` with **secure defaults**
 
 ---
 
-## 📦 Quick start (local)
+##  Quick start (local)
 
 1. Copy environment example:
 
@@ -68,7 +68,7 @@ If you’re using this starter, I strongly recommend reading through the handboo
 
 ---
 
-## 🔑 Authentication flow
+##  Authentication flow
 
 ### 1. Register
 
@@ -106,7 +106,7 @@ router.get('/me', auth, (req, res) => {
 module.exports = router;
 ```
 
-✅ This middleware:
+ This middleware:
 
 * Extracts `access_token` from cookies
 * Verifies it with `JWT_ACCESS_SECRET`
@@ -122,7 +122,7 @@ If the token is missing or invalid, returns `401 Unauthorized`.
 
 ---
 
-## 📂 Files included
+##  Files included
 
 * `middleware/auth.js` → Auth guard for protected routes
 * `models/user.model.js` → Secure Mongoose user schema
@@ -133,7 +133,7 @@ If the token is missing or invalid, returns `401 Unauthorized`.
 
 ---
 
-## ⚠️ Notes
+##  Notes
 
 * This repo is a **starter**, not a final product.
 * Before going to production:
@@ -146,7 +146,7 @@ If the token is missing or invalid, returns `401 Unauthorized`.
 ---
 
 
-## 🧪 Running Tests
+##  Running Tests
 
 ```bash
 npm test
@@ -154,7 +154,7 @@ npm test
 
 ---
 
-## 🛠️ Available Scripts
+##  Available Scripts
 
 * `npm run dev` → Run with auto-restart (Nodemon).
 * `npm start` → Run in production mode.
@@ -163,7 +163,7 @@ npm test
 
 ---
 
-## 📜 License
+##  License
 
 MIT License © 2025 -  Muhammad Abdullah Khaver
 
